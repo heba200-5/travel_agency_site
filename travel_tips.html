@@ -1,0 +1,337 @@
+<html>
+    <head>
+        <title> JourneyMakers Travel Agency </title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: white;
+            }
+            .header{
+              
+            background-image: url("img2.jpg"); 
+            background-size: cover; 
+            background-position: center center; 
+            color: white;
+            text-align: center;
+            padding: 60px 20px; 
+            height: 300px
+            }
+           
+           .header h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 48px; 
+                
+            }
+            .header p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+            }
+            header .tagline {
+            font-size: 20px;
+            color:darkgoldenrod;
+            margin-top: 15px;
+            font-style: italic;
+}
+            nav{
+        background-color:darkblue;
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 10px 0; 
+        z-index: 1000;
+        }
+        nav ul {
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        }
+ 
+        nav ul li a {
+         color: white; 
+        text-decoration: none;
+        font-size: 18px; 
+        padding: 8px 15px; 
+        }
+        nav ul li a:hover {
+    background-color: darkgrey;
+        }
+        .footer {
+  background-color:darkgray; 
+  color: white;  
+  text-align: center;  
+}
+
+        .footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;  
+    text-align: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;  
+}
+
+.icon img {
+  width: 40px;  
+  height: 40px; 
+}
+.icon:hover img {
+  transform: scale(1.1);
+}
+
+.contact-info p {
+  margin: 5px 0;  
+  font-size: medium;
+  color:beige;
+  text-align: left;
+}
+
+.contact-info a {
+  color:beige; 
+  text-decoration: none; 
+  text-align: left; 
+}
+
+.travel-tips {
+    padding: 40px;
+    background-color: white;
+    color:black;
+    line-height: 1.6;
+}
+
+.travel-tips h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: darkgoldenrod;
+    margin-bottom: 30px;
+
+}
+
+.tips {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px;
+} 
+.tips-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.tips h3 {
+    font-size: medium;
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+.tips ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tips ul li {
+    margin-bottom: 10px;
+}
+
+.tip-image {
+    width: 30%;
+}
+
+.tip-image img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.checklist {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checklist h3 {
+    text-align: center;
+    font-style: serif;
+    font-size: 24px;
+    color: darkblue;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); 
+}
+
+.item label {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color:black;
+}
+
+.checklist form {
+    padding: 10px;
+}
+                             
+    </style>
+    </head>
+
+    
+    <body>
+        <header class="header">
+        <div class="div1">
+            <h1> <strong>Design Your Journey Today </strong> </h1>
+            <p> From hidden gems to iconic landmarks<br> 
+                your next amazing trip is just a click away!</p>
+            <p class="tagline">Travel Smarter, Explore Further!</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href=" home.html"> Home</a></li>
+                <li> <a href="about_us.html"> About Us</a></li>
+                <li> <a href="travel_tips.html"> Travel Tips</a></li>
+                <li> <a href="contact.html"> Contact Us</a></li>
+                
+                
+            </ul>
+        </nav>
+
+        <div class="travel-tips">
+            <h2> Travel Tips for Your Next Adventure</h2>
+            <div class="tips">
+                <div class="tips-content">
+                <h3> Money Exchange Tips</h3>
+                <ul>
+                    <li>Always carry a mix of cash and credit cards for flexibility.</li>
+                    <li>Exchange a small amount at the airport for convenience but look for better rates in the city.</li>
+                    <li>Check exchange rates in advance using apps or websites.</li>
+                    <li>Avoid exchanging money at tourist hotspots where rates are often unfavorable.</li>
+                </ul>
+            <div class="tip-image">
+                <img src="exchange-rate.png">
+            </div>
+            </div>
+            </div>
+            <div class="tips">
+                <div class="tips-content">
+                <h3>General Travel Tips</h3>
+                <ul>
+                    <li>Always have a copy of your important documents, such as your passport and travel insurance.</li>
+                    <li>Learn a few basic phrases in the local language.</li>
+                    <li>Research your destination customs and etiquette to avoid unintentional offense.</li>
+                    <li>Keep a digital and physical copy of your travel itinerary.</li>
+                </ul>
+            <div class="tip-image">
+                <img src="idea.png">
+            </div>
+            </div>
+            </div>
+            <div class="tips">
+                <div class="tips-content">
+                <h3>Cuisine Guide</h3>
+                <ul>
+                    <li>Try local street food for an authentic  experience.</li>
+                    <li>Look for restaurants with a mix of locals and tourists for quality and authenticity.</li>
+                    <li>Be mindful of dietary restrictions and allergens; communicate these to the staff.</li>
+                    <li>Stay hydrated, especially when trying spicy or rich cuisines.</li>
+                </ul>
+            <div class="tip-image">
+                <img src="noodles.png">
+            </div>
+            </div>
+            </div>
+            <div class="tips">
+                <div class="tips-content">
+                <div class="checklist">
+                <h3>Packing Checklist</h3>
+                <form>
+                    <div class="item">
+                    <input type="checkbox" id="passport" name="passport">
+                    <label for="passport">Passport and Visa</label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" id="ticket" name="ticket">
+                        <label for="ticket">Travel Tickets</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="clothing" name="clothing">
+                            <label for="clothing">Clothing</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="electronics" name="electronics">
+                                <label for="electronics">Electronics and Chargers</label>
+                                </div>
+                                <div class="item">
+                                    <input type="checkbox" id="medication" name="medication">
+                                    <label for="medication">Medications</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" id="money" name="money">
+                                        <label for="money">Money and Cards</label>
+                                        </div>
+                </form>
+              </div>
+              <div class="tip-image">
+                <img src="list.png">
+            </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="footer">
+            <div class="content">
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank" class="icon">
+                        <img src="facebook.png" >
+                      </a>
+                      <a href="https://instagram.com" target="_blank" class="icon">
+                        <img src="instagram.png">
+                      </a>
+                </div>
+                <div class="contact-info">
+                    <p>Email:<a href="mailto:info@journeymakers.com">info@journeymakers.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+9617133345</a></p></p>
+                </div>
+            </div>
+
+        </footer>
+    
+    </body> 
+</html> 

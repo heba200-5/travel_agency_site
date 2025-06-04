@@ -1,0 +1,314 @@
+<html>
+    <head>
+        <title> JourneyMakers Travel Agency </title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: white;
+            }
+            .header{
+              
+            background-image: url("img2.jpg"); 
+            background-size: cover; 
+            background-position: center center; 
+            color: white;
+            text-align: center;
+            padding: 60px 20px; 
+            height: 300px
+            }
+           
+           .header h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 48px; 
+                
+            }
+            .header p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+            }
+            nav{
+        background-color:darkblue;
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 10px 0; 
+        z-index: 1000;
+        }
+        nav ul {
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        }
+ 
+        nav ul li a {
+         color: white; 
+        text-decoration: none;
+        font-size: 18px; 
+        padding: 8px 15px; 
+        }
+        nav ul li a:hover {
+    background-color: darkgrey;
+        }
+
+.contact-us {
+    background-color: white;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    max-width: 1200px;
+}
+.right-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content h2 {
+    font-size: xx-large;
+    font-weight: bold;
+    color:darkblue;
+    margin-bottom: 20px;
+}
+
+.right-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content label {
+    font-size: large;
+}
+
+.right-content input, .left-content textarea {
+   margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+.right-content button {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+.right-content button:hover {
+    background-color: lightblue;
+}
+.left-content{
+    display: flex;
+    flex-direction: column;
+}
+.left-content h2 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.left-content p {
+    font-size: large;
+    margin-bottom: 15px;
+    color: black;
+}
+.left-content img{
+    width: 30px; 
+    height: 30px; 
+    margin-right: 15px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  flex-direction: column;  
+    text-align: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;  
+}
+
+.icon img {
+  width: 40px;  
+  height: 40px; 
+}
+.icon:hover img {
+  transform: scale(1.1);
+}
+
+.contact-info p {
+  margin: 5px 0;  
+  font-size: medium;
+  color:beige;
+  text-align: left;
+}
+
+.contact-info a {
+  color:beige; 
+  text-decoration: none; 
+  text-align: left; 
+}
+.footer {
+  background-color:darkgray; 
+  color: white;  
+  text-align: center;  
+}
+.faq {
+    padding: 40px;
+    background-color:white;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 30px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.question{
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px;
+    text-align: left;
+}
+
+.question h3 {
+    font-size: large;
+    color: black ;
+    margin-bottom: 10px;
+}
+
+.question p {
+    font-size: medium;
+    color: black ;
+}
+
+
+
+
+                             
+    </style>
+    </head>
+
+    
+    <body>
+        <header class="header">
+        <div class="div1">
+            <h1> <strong>Design Your Journey Today </strong> </h1>
+            <p> From hidden gems to iconic landmarks<br> 
+                your next amazing trip is just a click away!</p>
+
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href=" home.html"> Home</a></li>
+                <li> <a href="about_us.html"> About Us</a></li>
+                <li> <a href="travel_tips.html"> Travel Tips</a></li>
+                <li> <a href="contact.html"> Contact Us</a></li>
+                
+                
+            </ul>
+        </nav>
+        <div class="contact-us">
+            <div class="content">
+                <div class="left-content">
+                    <h2>Contact Information</h2>
+                    <p><img src="call.png" ><strong>Call us:</strong>+961 7133455</p>
+                    <p><img src="location.png"> <strong>Visit us us:</strong>Lebanon, Beirut</p>
+                    <p><img src="working-hours.png"><strong>Business Hours:</strong>Monday to Saturday<br> from 8:00 am to 4:00 pm</p>
+                </div>
+           
+
+                <div class="right-content">
+
+                    <h2>Get In Touch</h2>
+                    <form class="contact-form">
+                        <div class="group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="group">
+                            <label for="useremail">Email</label>
+                            <input type="email" name="useremail" id="useremail">
+                        </div>
+                        <div class="group">
+                            <label for="comments">Please share your thoughts or inquiries here..</label>
+                            <textarea name="comments" id="comments" cols="40" rows="3"> </textarea>
+                        </div>
+                        <div class="group">
+                            <button type="submit" class="submit-button">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="question">
+                    <h3><strong> What destinations do you offer for your trips?</strong></h3>
+                    <p>We tailor our packages to suit a variety of Asian countries, from Japan thailand, Veitnam, <br>
+                        to Middle Eastren countries, shedding light on both popular landmarks and hidden gems. </p>
+                </div>
+                <div class="question">
+                    <h3> <strong>Can I alter my booking after confirmation?</strong></h3>
+                    <p>Definitly. We offer flexibilty in modifying your booking. When needed,please contact our customer support team,<br>
+                    and they will be ready to help you adjust your booking details.  </p>
+                </div>
+                <div class="question">
+                    <h3><strong> Are your trips customizable?</strong></h3>
+                    <p>Absolutely! We dedicate our efforts to tailor your journey as it suits you. </p>
+                </div>
+                <div class="question">
+                    <h3> <strong> What are your payment options?</strong></h3>
+                    <p>We accept payments via credit cards, bank transfer, or cash in our office.</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <footer class="footer">
+                <div class="content">
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank" class="icon">
+                            <img src="facebook.png" >
+                          </a>
+                          <a href="https://instagram.com" target="_blank" class="icon">
+                            <img src="instagram.png">
+                          </a>
+                    </div>
+                    <div class="contact-info">
+                        <p>Email:<a href="mailto:info@journeymakers.com">info@journeymakers.com</a></p>
+                        <p>Phone: <a href="tel:+1234567890">+9617133345</a></p></p>
+                    </div>
+                </div>
+    
+            </footer>
+        
+
+    </body> 
+</html> 

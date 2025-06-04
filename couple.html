@@ -1,0 +1,451 @@
+<html>
+    <head>
+        <title>Journeymakers Family Trips</title>
+        <style>
+            body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Header with image */
+    header {
+      background: url('header.jpg') ;
+      background-size:cover ;
+      background-position: center center;
+      color: white;
+      text-align: left;
+      padding: 60px 20px;
+      height: 400px;
+
+    } 
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      margin-top: 100px;
+    }
+
+    /* Sticky Navigation */
+    nav{
+        background-color:darkblue;
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 10px 0; 
+        z-index: 1200;
+        }
+        nav ul {
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        }
+ 
+        nav ul li a {
+         color: white; 
+        text-decoration: none;
+        font-size: 18px; 
+        padding: 8px 15px; 
+        }
+        nav ul li a:hover {
+    background-color: darkgrey;
+        }
+    /* "Why Choose Trip Types" Section */
+    .info {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .info h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: darkblue;
+    }
+
+    .info p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+
+    /* "Where To?" Section */
+    .destinations {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .destinations h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: darkblue;
+    }
+    .destinations p{
+        text-align: center;
+        font-size: medium;
+    }
+
+    .destination-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      text-decoration: none;
+      color: inherit;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img {
+        width: 100%;            /* Ensures the image fills the container */
+    height: 400px;          /* Set a fixed height for all images */
+    object-fit: cover;      /* Ensures the image covers the space without distorting */
+    border-radius: 8px;
+    display: block;         /* Ensures the image is centered */
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .card h3 {
+      margin: 15px 10px;
+      font-size: 1.5rem;
+      color: darkblue;
+    }
+
+    /* Flex layout for the destination section */
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* Ensure the image takes up space on the left */
+.destination-img {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.destination-img img {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+}
+
+/* Ensure the info section is next to the image */
+.destination-info {
+    flex: 2;
+    max-width: 600px;
+}
+
+.destination-info h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color:darkblue;
+}
+
+.destination-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.packages {
+  display: flex;
+  flex-wrap: wrap;  /* Allows wrapping of items to the next line */
+  gap: 20px;  /* Space between the packages */
+  justify-content: flex-start; /* Aligns items at the start of the container */
+  margin-top: 20px;  /* Adds space above the packages */
+  width:100%;
+}
+
+/* Individual package box */
+.package {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  max-width: 300px;  /* Set a fixed max-width for each box */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  display: flex;
+  flex-direction: column;  /* Align contents vertically inside the box */
+}
+
+/* Package header */
+.package h4 {
+  font-size: 1.25em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Package description */
+.package p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.package strong {
+  font-weight: bold;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: darkblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none;
+  z-index: 1000; /* Ensure the button stays above other elements */
+}
+
+/* Show the button when the page is scrolled down */
+body:has(:target) .scroll-to-top {
+  display: block;
+}
+
+.scroll-to-top:hover {
+  background-color: #1e2a8a; /* Darker shade when hovered */
+}
+
+
+
+  </style>
+</head>
+<body>
+
+        </style>
+    </head>
+    <body>
+        <header class="header" >
+            <div class="header-content">
+                <h1>Explore Together,<br>
+                Travel Far!</h1>
+                <p>Let's plan your next escape, <br>
+                    to create memories that lasts a lifetime.</p>
+                </div>
+        </header>
+                    <nav>
+                        <ul>
+                            <li> <a href=" home.html"> Home</a></li>
+                            <li> <a href="about_us.html"> About Us</a></li>
+                            <li> <a href="travel_tips.html"> Travel Tips</a></li>
+                            <li> <a href="contact.html"> Contact Us</a></li>
+                            
+                            
+                        </ul>
+                    </nav>
+               
+         
+
+        <div class="details">
+            <div class="info">
+                <h2>Why Choose A Trip With Your Partner?</h2>
+                <p>A couple’s trip is an ideal way to escape the everyday hustle and spend quality time together.<br> 
+                    Whether it's relaxing on a tropical beach, exploring a vibrant city, or enjoying nature,<br> 
+                    a couples' vacation offers the chance to share intimate experiences and discover new places as a team.<br>
+                    Let us help you plan the ultimate getaway that fits your needs and creates memories that last a lifetime.
+                </p>
+            </div>
+            <div class="destinations" id="top">
+                <h2>Where To?</h2>
+                <p> Asia , with each of its four main regions offers unique experiences for travelers.<br>
+                     From East Asia, West Asia, Central Asia, to the Middle east, many gems are ready to be explored.<br>
+                      <b>Get to know more by pressing on your preferred area,
+                     and be transported directly to our top suggestion for a romantic getaway to discover more details about it!</b></p>
+                <div class="destination-card" >
+                    <a href="#east-asia" class="card">
+                        <img src="east-asia.jpg" class="card-img">
+                        <h3>East Asia</h3>
+                    </a>
+                    <a href="#south-asia" class="card">
+                        <img src="south-east.webp" class="card-img">
+                        <h3>South Asia</h3>
+                    </a>
+                    <a href="#central-asia" class="card">
+                        <img src="central-asia.webp" class="card-img">
+                        <h3>Central Asia</h3>
+                    </a>
+                    <a href="#middle-east" class="card">
+                        <img src="middle-east.jpeg" class="card-img">
+                        <h3>Middle East</h3>
+                    </a>
+                </div>
+                <div id="east-asia" class="destination-section">
+                    <h2>Explore JeJu Island, South Korea</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="jeju.webp" >
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>Hallasan Mountain</li>
+                            <li>JeongBang Waterfall</li>
+                            <li>LoveLand Park(for lovers)</li>
+                            <li>Manjanggul Cave(longest lava tubes)</li>
+                        </ul>
+                        <h3>Why It's Great for Couples:</h3>
+                        <p>eju Island offers pristine beaches, waterfalls, and hiking trails. It's a perfect getaway for couples looking for a serene environment,
+                             as well as a place to explore natural beauty and culture.</p>
+                        <h3>Explore Packages:</h3>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>JeJu Island Adventure Package</h4>
+                                <p><strong>Price:</strong> $500 per person</p>
+                                <p>In 3 days, we offer guided hikes on Mountain, visits to waterfall,and ancient caves. 
+                                     Includes accommodation and transportation</p>
+                            </div>
+                            <div class="package">
+                                <h4>JeJu Romantic Getaway</h4>
+                                <p><strong>Price:</strong> $650 per person</p>
+                                <p>During 6 days, we offer a stay in a luxury resort, a visit to Loveland, 
+                                    sunset cruise around the island, and relaxation time at a hot spring.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+              
+                <div id="south-asia" class="destination-section">
+                    <h2>Discover the Maldives</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="maldives.webp">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>Private Island Resorts</li>
+                            <li>Sunset Cruises</li>
+                            <li>Private Dining on the beach or under the stars</li>
+                            <li>Spa treatments in most resorts</li>
+                        </ul>
+                        <h3>Why It's Great for Couples:</h3>
+                        <p>Famous for its overwater bungalows, crystal-clear waters, and private beaches, 
+                            the Maldives offers ultimate relaxation and luxury for couples.</p>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Maldives Honeymoon Paradise</h4>
+                                <p><strong>Price:</strong> $1,200 per person</p>
+                                <p>During 6 days, we offer a stay in an overwater bungalow, all-inclusive meals, 
+                                    sunset cruise, and a couple's spa treatment.</p>
+                            </div>
+                            <div class="package">
+                                <h4>Maldives Luxury Retreat</h4>
+                                <p><strong>Price:</strong> $1,500 per person</p>
+                                <p>During 7 days, experience a unique stay in a private villa, private candlelight dinner on the beach, snorkeling, 
+                                    diving, and a romantic picnic on a secluded island.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+                
+                <div id="central-asia" class="destination-section">
+                    <h2>Visit Tashkent, Uzbekistan</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="Tashkent.jpg" >
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>Khast Imam Complex</li>
+                            <li>Amir Timur Square</li>
+                            <li>Tashkent Metro</li>
+                            <li>Bukhara & Samarkand</li>
+                        </ul>
+                        <h3>Why It's Great for Couples:</h3>
+                        <p>With its beautiful mix of ancient history and vibrant culture,
+                             Tashkent provides a unique and romantic setting for couples.</p>
+                        <h3>Explore Packages:</h3>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Tashkent & Samarkand Heritage Tour</h4>
+                                <p><strong>Price:</strong> $600 per person</p>
+                                <p>During 6 days, immerse in guided tours of Tashkent’s top sights, day trips to Samarkand and Bukhara,
+                                     meals at local restaurants, and cultural performances.</p>
+                            </div>
+                            <div class="package">
+                                <h4>Tashkent Cultural Experience</h4>
+                                <p><strong>Price:</strong> $450 per person</p>
+                                <p>Explore , through 5 days, Tashkent’s historical landmarks, visit Chorsu Bazaar, 
+                                    local handicraft workshops, and traditional Uzbek cuisine meals.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+                <section id="middle-east" class="destination-section">
+                    <h2>Explore Petra, Jordan</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="Petra.jpg" >
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>The Treasury:,Petra's most famous monument</li>
+                            <li>Al Deir (The Monastery)</li>
+                            <li>Petra by Night</li>
+                            <li>Royal Tombs</li>
+                        </ul>
+                        <h3>Why It's Great for Couples:</h3>
+                        <p>Known for its ancient rock-carved architecture, 
+                            Petra offers a unique and mystical experience for couples seeking adventure and history.</p>
+                        <h3>Explore Packages:</h3>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Petra Discovery Tour</h4>
+                                <p><strong>Price:</strong> $350 per person</p>
+                                <p>In 4 days,experience guided tours of Petra, including the Treasury,
+                                     The Siq, and Al Deir, with an option for Petra by Night.</p>
+                            </div>
+                            <div class="package">
+                                <h4>Petra & Wadi Rum Adventure</h4>
+                                <p><strong>Price:</strong> $500 per person</p>
+                                <p>During 7 days, explore Petra’s monuments, take a jeep safari in Wadi Rum,
+                                     and spend a night in a Bedouin camp with traditional meals.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+              <a href="#top" class="scroll"></a>
+              <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                Go To Top
+              </button>
+
+    </body>
+</html>

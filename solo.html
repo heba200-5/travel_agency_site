@@ -1,0 +1,454 @@
+<html>
+    <head>
+        <title>Journeymakers Family Trips</title>
+        <style>
+            body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Header with image */
+    header {
+      background: url('header.jpg') ;
+      background-size:cover ;
+      background-position: center center;
+      color: white;
+      text-align: left;
+      padding: 60px 20px;
+      height: 400px;
+
+    } 
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      margin-top: 100px;
+    }
+
+    /* Sticky Navigation */
+    nav{
+        background-color:darkblue;
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 10px 0; 
+        z-index: 1200;
+        }
+        nav ul {
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        }
+ 
+        nav ul li a {
+         color: white; 
+        text-decoration: none;
+        font-size: 18px; 
+        padding: 8px 15px; 
+        }
+        nav ul li a:hover {
+    background-color: darkgrey;
+        }
+    /* "Why Choose Trip Types" Section */
+    .info {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .info h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: darkblue;
+    }
+
+    .info p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+
+    /* "Where To?" Section */
+    .destinations {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .destinations h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: darkblue;
+    }
+    .destinations p{
+        text-align: center;
+        font-size: medium;
+    }
+
+    .destination-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      text-decoration: none;
+      color: inherit;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img {
+        width: 100%;            /* Ensures the image fills the container */
+    height: 400px;          /* Set a fixed height for all images */
+    object-fit: cover;      /* Ensures the image covers the space without distorting */
+    border-radius: 8px;
+    display: block;         /* Ensures the image is centered */
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .card h3 {
+      margin: 15px 10px;
+      font-size: 1.5rem;
+      color: darkblue;
+    }
+
+    /* Flex layout for the destination section */
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* Ensure the image takes up space on the left */
+.destination-img {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.destination-img img {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+}
+
+/* Ensure the info section is next to the image */
+.destination-info {
+    flex: 2;
+    max-width: 600px;
+}
+
+.destination-info h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color:darkblue;
+}
+
+.destination-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.packages {
+  display: flex;
+  flex-wrap: wrap;  /* Allows wrapping of items to the next line */
+  gap: 20px;  /* Space between the packages */
+  justify-content: flex-start; /* Aligns items at the start of the container */
+  margin-top: 20px;  /* Adds space above the packages */
+  width:100%;
+}
+
+/* Individual package box */
+.package {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  max-width: 300px;  /* Set a fixed max-width for each box */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  display: flex;
+  flex-direction: column;  /* Align contents vertically inside the box */
+}
+
+/* Package header */
+.package h4 {
+  font-size: 1.25em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Package description */
+.package p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.package strong {
+  font-weight: bold;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: darkblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none;
+  z-index: 1000; /* Ensure the button stays above other elements */
+}
+
+/* Show the button when the page is scrolled down */
+body:has(:target) .scroll-to-top {
+  display: block;
+}
+
+.scroll-to-top:hover {
+  background-color: #1e2a8a; /* Darker shade when hovered */
+}
+
+
+
+  </style>
+</head>
+<body>
+
+        </style>
+    </head>
+    <body>
+        <header class="header" >
+            <div class="header-content">
+                <h1>Explore Together,<br>
+                Travel Far!</h1>
+                <p>Let's plan your next escape, <br>
+                    to create memories that lasts a lifetime.</p>
+                </div>
+        </header>
+                    <nav>
+                        <ul>
+                            <li> <a href=" home.html"> Home</a></li>
+                            <li> <a href="about_us.html"> About Us</a></li>
+                            <li> <a href="travel_tips.html"> Travel Tips</a></li>
+                            <li> <a href="contact.html"> Contact Us</a></li>
+                            
+                            
+                        </ul>
+                    </nav>
+               
+         
+
+        <div class="details">
+            <div class="info">
+                <h2>Why Choose A Solo Trip?</h2>
+                <p> A solo trip is the ultimate way to discover yourself and the world around you. With no one else's schedule to follow,<br> 
+                    you have the freedom to explore destinations at your own pace. <br>
+                    It’s an opportunity for self-growth and personal reflection, while also connecting with new people and cultures.<br>
+                    Allow us guide you with your perfect solo adventure! </p>
+            </div>
+            <div class="destinations" id="top">
+                <h2>Where To?</h2>
+                <p> Asia , with each of its four main regions offers unique experiences for travelers.<br>
+                     From East Asia, West Asia, Central Asia, to the Middle east, many gems are ready to be explored.<br>
+                      <b>Get to know more by pressing on your preferred area,
+                     and be transported directly to our top solo trips destination to discover more details about it!</b></p>
+                <div class="destination-card" >
+                    <a href="#east-asia" class="card">
+                        <img src="east-asia.jpg" class="card-img">
+                        <h3>East Asia</h3>
+                    </a>
+                    <a href="#south-asia" class="card">
+                        <img src="south-east.webp" class="card-img">
+                        <h3>South Asia</h3>
+                    </a>
+                    <a href="#central-asia" class="card">
+                        <img src="central-asia.webp" class="card-img">
+                        <h3>Central Asia</h3>
+                    </a>
+                    <a href="#middle-east" class="card">
+                        <img src="middle-east.jpeg" class="card-img">
+                        <h3>Middle East</h3>
+                    </a>
+                </div>
+                <div id="east-asia" class="destination-section">
+                    <h2>Explore Taipei, Taiwan</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="taipei.avif" >
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>National Palace Museum</li>
+                            <li>Shilin Night Market</li>
+                            <li>Taipei 101 (an iconic skyscraper)</li>
+                            <li>Elephant Mountain </li>
+                        </ul>
+                        <h3>Why It's Great for Solo Travelers:</h3>
+                        <p>Famous for its beautiful mountains, vibrant night markets, 
+                            and a welcoming atmosphere for solo explorers.</p>
+                        <h3>Explore Packages:</h3>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Taipei City Highlights Tour (4 Days)</h4>
+                                <p><strong>Price:</strong> $400 per person</p>
+                                <p>In 4 days, explore Taipei 101, the National Palace Museum, Shilin Night Market, and more,
+                                    including guided city tour, transport, and local meals.</p>
+                            </div>
+                            <div class="package">
+                                <h4>Taipei Adventure and Nature Tour  </h4>
+                                <p><strong>Price:</strong> $550 per person</p>
+                                <p>During 6 days, engage in activities as hiking ,visiting Beitou Hot Springs,
+                                     and day trips to nearby areas like Jiufen.
+                                    Includes guided tours, hiking, and cultural experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+              
+                <div id="south-asia" class="destination-section">
+                    <h2>Discover Hong Kong</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="HongKong.jpg">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>Victoria Peak</li>
+                            <li>Big Buddha and Po Lin Monastery</li>
+                            <li>Star Ferry Ride</li>
+                            <li>Hong Kong Disneyland</li>
+                        </ul>
+                        <h3>Why It's Great for Solo Travelers:</h3>
+                        <p>A bustling city with a blend of modern skyscrapers,
+                            traditional markets, and scenic hikes, perfect for solo travelers who enjoy city life and nature.</p>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Hong Kong City Exploration </h4>
+                                <p><strong>Price:</strong> $450 per person</p>
+                                <p>Includes, in 3 days, a guided tours to famous landmarks and the famous rice terraces, plus engaging  activities.
+                                    We offer transportation, tickets, and guided tours.
+                                </p>
+                            </div>
+                            <div class="package">
+                                <h4>Hong Kong Culture and Shopping Tour</h4>
+                                <p><strong>Price:</strong> $600 per person</p>
+                                <p>Experience, throughout 8 days, temples, markets, and famous shopping districts like Mong Kok and Tsim Sha Tsui.
+                                    Includes shopping guide, transport, and local experiences. </p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+                
+                <div id="central-asia" class="destination-section">
+                    <h2>Visit Nepal</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="nepal.jpg" >
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>Kathmandu Durbar Square</li>
+                            <li>Patan and Bhaktapur</li>
+                            <li>Everest Base Camp Trek (optional for adventurers)</li>
+                
+                        </ul>
+                        <h3>Why It's Great for Solo Travelers:</h3>
+                        <p>Known for its trekking routes, especially the Annapurna and Everest regions,
+                            Nepal is a great choice for solo adventurers seeking mountains and tranquility.</p>
+                        <h3>Explore Packages:</h3>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Kathmandu and Pokhara Adventure </h4>
+                                <p><strong>Price:</strong> $650 per person</p>
+                                <p>Throughout 7 days, Visit Kathmandu’s historical sites, then travel to Pokhara for trekking,
+                                     paragliding, and boating on Phewa Lake. Includes accommodation, guided tours, and transportation.</p>
+                            </div>
+                            <div class="package">
+                                <h4>Everest Base Camp Trek</h4>
+                                <p><strong>Price:</strong> $1,099per person</p>
+                                <p>An adventurous trek, 12-days long,  from Lukla to Everest Base Camp with scenic mountain views 
+                                    and cultural experiences.
+                                    Includes all logistics, guides, meals, and trekking permits. </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+                <section id="middle-east" class="destination-section">
+                    <h2>Explore Lebanon</h2>
+                    <div class="destination-container">
+                    <div class="destination-img">
+                        <img src="lebanon.jpg" >
+                    </div>
+                    <div class="destination-info">
+                        <h3>Highlights:</h3>
+                        <ul>
+                            <li>Beirut</li>
+                            <li>Byblos</li>
+                            <li>Jeita Grotto</li>
+                            <li>Baalbek</li>
+                        </ul>
+                        <h3>Why It's Great for Solo Travelers:</h3>
+                        <p> A mix of historical sites, vibrant nightlife, and welcoming people makes Lebanon
+                             a great choice for solo travelers looking for cultural exploration. </p>
+                        <h3>Explore Packages:</h3>
+                        <div class="packages">
+                            <div class="package">
+                                <h4>Lebanon Historical Tour </h4>
+                                <p><strong>Price:</strong> $600 per person</p>
+                                <p>Explore, throughout 5 days Beirut, Byblos, Baalbek, and Jeita Grotto with guided tours of ancient ruins and historical sites.
+                                    Includes transport, accommodation, and expert guides. </p>
+                            </div>
+                            <div class="package">
+                                <h4>Lebanon Culture and Nature Tour </h4>
+                                <p><strong>Price:</strong> $750 per person</p>
+                                <p>Discover, ina 6-days tour, the history of Lebanon in the morning and venture to natural attractions 
+                                    like the Cedars of God and the Chouf Mountains in the afternoon.
+                                    Includes guided tours, meals, and transport.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+              <a href="#top" class="scroll"></a>
+              <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                Go To Top
+              </button>
+
+    </body>
+</html>

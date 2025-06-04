@@ -1,0 +1,401 @@
+<html>
+    <head>
+        <title> JourneyMakers Travel Agency </title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: white;
+            }
+            .header{
+              
+            background-image: url("img2.jpg"); 
+            background-size: cover; 
+            background-position: center center; 
+            color: white;
+            text-align: center;
+            padding: 60px 20px; 
+            height: 300px
+            }
+           
+           .header h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 48px; 
+                
+            }
+            .header p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+            }
+           
+    
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color:darkgreen ;
+        }
+        nav{
+        background-color:darkblue;
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 10px 0; 
+        z-index: 1000;
+        }
+        nav ul {
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        }
+ 
+        nav ul li a {
+         color: white; 
+        text-decoration: none;
+        font-size: 18px; 
+        padding: 8px 15px; 
+        }
+        nav ul li a:hover {
+    background-color: darkgrey;
+        }
+        .type {
+    padding: 40px;
+    background-color: #f8f9fa;  
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0;  
+}
+
+.type h2 {
+    font-size: 2.5rem;  
+    font-weight: bold;
+    color: darkblue; /* Green color for adventure feel */
+    margin-bottom: 15px;
+}
+
+.type p {
+    font-size: 1.2rem;
+    color: #555;  /* Dark gray for readability */
+    line-height: 1.6;
+    max-width: 800px;  /* Keep text compact */
+    margin: 0 auto;
+}
+
+    .trip-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 30px;
+  padding: 20px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.card {
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h3 {
+  margin: 15px 10px 5px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p {
+  margin: 0 10px 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+            .booking-section {
+        width: 80%;
+        padding: 40px;
+        background-color: white;
+        border-radius: 8px;
+        }
+
+
+        .container {
+        display: flex;  
+        justify-content: space-between;  
+        gap: 30px;  
+        }
+
+
+        .image {
+        flex: 1;  
+        max-width: 450px; 
+        }
+
+        .image img {
+        width: 85%;  
+        height: 350px; 
+        border-radius: 8px; 
+        }
+
+       .section-title {
+         text-align: center;
+        font-size:xx-large;
+        margin-bottom: 20px;
+        color:darkblue;
+        margin-top: 75px;
+         }
+
+        .booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1.5; 
+        }
+
+        .group {
+        display: flex;
+        flex-direction: column;
+        }
+
+        .group label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        }
+
+
+        .group select {
+        padding: 10px;
+        font-size: medium;
+        border: 1px solid white;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+        }
+
+        
+        .group select:focus {
+        border-color: darkblue
+        }
+
+        .submit-button {
+        background-color: darkblue;
+        color: white;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: medium;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+        .footer {
+        background-color:darkgray; 
+        color: white;  
+        text-align: left;  
+        }
+
+        .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+        flex-direction: column;  
+        text-align: center;
+        }
+
+
+        .social-media {
+        display: flex;
+        gap: 15px;  
+        }
+
+        .icon img {
+        width: 40px;  
+        height: 40px; 
+        }
+        .icon:hover img {
+        transform: scale(1.1);
+        }
+
+        .contact-info p {
+        margin: 5px 0;  
+        font-size: medium;
+        color:beige;
+        text-align: left;
+        }
+
+        .contact-info a {
+        color:beige; 
+        text-decoration: none; 
+        text-align: left; 
+        }
+
+
+
+                        
+        </style>
+    </head>
+
+    
+    <body>
+        <header class="header">
+        <div class="div1">
+            <h1> <strong>Design Your Journey Today </strong> </h1>
+            <p> From hidden gems to iconic landmarks<br> 
+                your next amazing trip is just a click away!</p>
+
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href=" home.html"> Home</a></li>
+                <li> <a href="about_us.html"> About Us</a></li>
+                <li> <a href="travel_tips.html"> Travel Tips</a></li>
+                <li> <a href="contact.html"> Contact Us</a></li>
+                
+                
+            </ul>
+        </nav>
+        <div class="type">
+            <h2 class="type-title"> <strong> Choose your Next Adventure Type</strong></h2>
+            <p> Explore tailored tips, destinations, and further details suitable for each type!</p>
+        <div class="trip-cards">
+                <a href="family.html" class="card">
+                <img src="family.jpg" >
+                <h3 >Family Trips</h3>
+                <p>Create Unforgettable Memories with your loved ones</p>
+                </a>
+          
+
+                <a href="friends.html"class="card" >
+                <img src="friends.webp" >
+                <h3  >Friends Trips</h3>
+                <p> Embark on an exciting journey with your friends </p>
+                </a>
+            
+
+                <a href="couple.html"class="card" >
+                <img src="couple.webp" >
+                <h3 >Couple Trips</h3>
+                <p>Romantic Getaways for priceless moments</p>
+                </a>
+          
+ 
+                <a href="solo.html" class="card">
+                <img src="solo.webp">
+                <h3  >Solo Trips</h3>
+                <p>Explore the world on your terms with tailor-made solo adventures.</p>
+                </a>
+         
+        </div>
+        </div>
+
+        <div class="booking">
+            <h2 class="section-title">Book Now</h2>
+            <div class="container">
+                <div class="image">
+                    <img src="booking.png" >
+                </div>
+
+           
+            <form class="booking-form">
+                <div class="group">
+                <label for="type">Type Of the Trip</label> 
+                <select size="4" name="type" id="type">
+                    <option value="family.html">Family</option>
+                    <option value="friends.html">Friends</option>
+                    <option value="couple.html">Couple</option>
+                    <option value="solo.html">Solo</option>
+                </select>
+                </div>
+                <div class="group">
+                    <label for="destination">Where To</label>
+                    <input type="text" name="destination" id="destination">
+                </div>
+                <div class="group">
+                    <label for="trip-date">Travel Date</label>
+                    <input type="date" name="trip-date" id="trip-date">
+                </div>
+                <div class="group">
+                    <label for="travelers-number">How Many</label>
+                    <input type="number" name="travelers-number" id="travelers-number">
+                </div>
+                <div class="group">
+                    <label for="user-email">Email</label>
+                    <input type="email" name="user-email" id="user-email">                    
+                </div>
+                <div class="group">
+                    <label for="user-number"> Phone Number</label>
+                    <input type="tel" name="user-number" id="user-number">
+                </div>
+                <div class="group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form> 
+            </div>
+            
+        </div>
+
+        <footer class="footer">
+            <div class="content">
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank" class="icon">
+                        <img src="facebook.png" >
+                      </a>
+                      <a href="https://instagram.com" target="_blank" class="icon">
+                        <img src="instagram.png">
+                      </a>
+                </div>
+                <div class="contact-info">
+                    <p>Email:<a href="mailto:info@journeymakers.com">info@journeymakers.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+9617133345</a></p></p>
+                </div>
+            </div>
+
+        </footer>
+    
+       
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

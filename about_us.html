@@ -1,0 +1,438 @@
+<html>
+    <head>
+        <title> JourneyMakers Travel Agency </title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: white;
+            }
+            .header{
+              
+            background-image: url("img2.jpg"); 
+            background-size: cover; 
+            background-position: center center; 
+            color: white;
+            text-align: center;
+            padding: 60px 20px; 
+            height: 300px;
+            
+            }
+           
+           .header h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 48px; 
+                
+            }
+            .header p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+            }
+            nav{
+        background-color:darkblue;
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 10px 0; 
+        z-index: 1000;
+        }
+        nav ul {
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        }
+ 
+        nav ul li a {
+         color: white; 
+        text-decoration: none;
+        font-size: 18px; 
+        padding: 8px 15px; 
+        }
+        nav ul li a:hover {
+    background-color: darkgrey;
+        }
+             .reviews {
+                background-color: white; 
+                padding: 40px;
+                text-align: center;
+                margin-top: 50px; 
+            }
+            .content {
+                display: flex;
+                justify-content: space-between; 
+                gap: 20px; 
+                flex-wrap: nowrap;
+            }
+
+
+            .reviews h2 {
+                font-size: 30px;
+                color:darkblue;
+                margin-bottom: 20px;
+            }
+
+            .review {
+                background-color: white;
+                border: 1px solid lightgrey;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 15px auto;
+                width: 30%; 
+                box-sizing: border-box; 
+                text-align: left;
+
+            }
+
+            .review p {
+                font-size: 18px;
+                color: black;
+                margin-bottom: 15px;
+            }
+
+            .review h4 {
+                font-size: 20px;
+                color: #333;
+                font-weight: bold;
+            }
+           
+.overview {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1; 
+    flex-direction: row; 
+    flex-wrap: nowrap;
+
+
+}
+
+.overview-image img {
+    max-width: 85%;
+    height: auto;
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex: 0 0 40%;
+}
+
+.overview-content h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: darkblue;
+
+}
+
+.overview-content p {
+    font-size: large;
+    color: black;
+}
+.mission-statement{
+    display: flex; 
+    align-items: center; 
+    padding: 5px;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto; 
+    flex-wrap: nowrap;
+    padding: 10px;
+    gap: 10px;
+
+}
+.mission-icon img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px; 
+    margin-right: 10px;
+}
+.mission-content {
+    flex: 1; 
+}
+.mission-content h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: darkblue;
+
+}
+
+.mission-content p {
+    font-size: large;
+    color: black;
+}
+.team {
+    padding: 20px;
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 20px;
+    color: darkblue;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.member {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.member h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.tmember p {
+    font-size: 1rem;
+    color: #555;
+}
+.footer {
+  background-color:darkgray; 
+  color: white;  
+  text-align: left;  
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;  
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;  
+}
+
+.icon img {
+  width: 40px;  
+  height: 40px; 
+}
+.icon:hover img {
+  transform: scale(1.1);
+}
+
+.contact-info p {
+  margin: 5px 0;  
+  font-size: medium;
+  color:beige;
+  text-align: left;
+}
+
+.contact-info a {
+  color:beige; 
+  text-decoration: none; 
+  text-align: left; 
+}
+
+
+
+
+
+                        
+        </style>
+    </head>
+
+    
+    <body>
+        <header class="header">
+        <div class="div1">
+            <h1> <strong>Design Your Journey Today </strong> </h1>
+            <p> From hidden gems to iconic landmarks<br> 
+                your next amazing trip is just a click away!</p>
+
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href=" home.html"> Home</a></li>
+                <li> <a href="about_us.html"> About Us</a></li>
+                <li> <a href="travel_tips.html"> Travel Tips</a></li>
+                <li> <a href="contact.html"> Contact Us</a></li>
+                
+                
+            </ul>
+        </nav>
+      
+        <div class="overview">
+            <div class="overview-image">
+                <img src="lebanon.jpg">
+            </div>
+            <div class="overview-content">
+            <h2> Company Overview</h2>
+            <p> Welcome To JourneyMakers Travel Agency!
+                <br> Founded in the heart of Lebanon in year 2024, we have been committed to craft an unforgettable journey
+                for all sections of our population.<br> From families, to friends, to couples, or even solo travelers, we are dedicated 
+                to tailor travel packages that suit diverse tastes and budgets.
+                <br>And because we truly believe that our Asian countries are filled with spectacular landmarks waiting to be explored,<br>
+                we decided to focus in our websites in making unforgettable journeys throughtout our Asian countries.
+            </p>
+            </div>
+        </div>
+        <div class="mission-statement">
+            
+            <div class="mission-icon">
+                <img src="mission.png">
+            </div>
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p> Our mission was, from the very beginning, to provide outstanding travel experiences that allow us <br> 
+                to create unforgettable memories that lasts a lifetime. With a deep passion for our region's diverse landmarks,<br>
+                we are committed to deliver authentic travel experiences that exceeds expectations, for every single explorer! </p>
+            </div>
+
+        </div>
+        <div class="team">
+            <h2>Meet Our Team</h2>
+            <div class="card">
+                <div class="member">
+                        <img src="CEO.png">
+                        <h3>Abbass F.</h3>
+                        <p>CEO</p>
+                </div>
+                <div class="member">
+                    <img src="manager.png">
+                    <h3>Joelle M.</h3>
+                    <p>Manager of the team</p>
+            </div>
+            <div class="member">
+                <img src="consultation.png">
+                <h3>Heba F.</h3>
+                <p>Travel Consultant</p>
+        </div>
+        <div class="member">
+            <img src="technical-support.png">
+            <h3>Fatima N.</h3>
+            <p>Customer Support</p>
+    </div>
+            </div>
+        </div>
+            <div class="reviews">
+                <h2> What do our clients say about us?</h2>
+                <div class="content">
+                <div class=" review">
+                    <h4> Fatima K.</h4>
+                    <p> My experience with this company was outstanding!<br> I never worried about a single detail throughout the whole Journey
+                    <br> Highly recommended!</p>
+                </div>
+                <div class="review">
+                    <h4> Joelle H.</h4>
+                    <p> I've never visited the Asian countries, but after traveling with JourneyMakers <br> I am dedicated to visit every possible destination!</p>
+                </div>
+                <div class="review">
+                    <h4> Mohammad F.</h4>
+                    <p> My trip was with a bunch of freinds, and i can gurantee you an exceptional trip. <br> every single detail I booked with this agency was true in real life. <br>
+                    The only thing i would like them to do is to help us book a new trip in Europe!</p>
+                </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="content">
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank" class="icon">
+                            <img src="facebook.png" >
+                          </a>
+                          <a href="https://instagram.com" target="_blank" class="icon">
+                            <img src="instagram.png">
+                          </a>
+                    </div>
+                    <div class="contact-info">
+                        <p>Email:<a href="mailto:info@journeymakers.com">info@journeymakers.com</a></p>
+                        <p>Phone: <a href="tel:+1234567890">+9617133345</a></p></p>
+                    </div>
+                </div>
+    
+            </footer>
+        
+
+           
+
+
+
+
+
+
+
+
+
+
+       </body>
+    </html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
